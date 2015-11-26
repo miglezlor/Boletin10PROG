@@ -12,7 +12,7 @@ public class Metodos101 {
 
     public int getNumero() {
         do {
-            numero = Integer.parseInt(JOptionPane.showInputDialog("Jugador1, introduce el numero para adivinar"));
+            numero = Integer.parseInt(introducir("Jugador1, introduce el numero para adivinar"));
         } while (numero < 1 | numero > 50);
         return numero;
     }
