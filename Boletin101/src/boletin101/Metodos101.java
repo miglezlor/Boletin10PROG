@@ -41,13 +41,13 @@ public class Metodos101 {
         }
 
     }
-    public void imprimir (String cadenaAImprimir){
-        
+
+    public void imprimir(String cadenaAImprimir) {
         JOptionPane.showMessageDialog(null, cadenaAImprimir);
     }
-    
-    public String introducir (String pregunta){
-        String dato= JOptionPane.showInputDialog(pregunta);
+
+    public String introducir(String pregunta) {
+        String dato = JOptionPane.showInputDialog(pregunta);
         return dato;
     }
 
