@@ -19,7 +19,7 @@ public class Metodos101 {
 
     public int getIntentos() {
         do {
-            intentos = Integer.parseInt(JOptionPane.showInputDialog("Jugador1, numero maximo de intentos"));
+            intentos = Integer.parseInt(introducir("Jugador1, numero maximo de intentos"));
         } while (intentos <= 0);
         return intentos;
 
@@ -27,23 +27,28 @@ public class Metodos101 {
 
     public void xogo(int numero, int intentos, int i) {
         for (i = 0; i < intentos; i++) {
-            int numIntento = Integer.parseInt(JOptionPane.showInputDialog("Jugador2, intenta adivinar"));
+            int numIntento = Integer.parseInt(introducir("Jugador2, intenta adivinar"));
             if (numIntento != numero) {
                 if (numIntento < numero) {
-                    imprimir("El numero es mayor", 0);
+                    imprimir("El numero es mayor");
                 } else {
-                    imprimir("El numero es menor", 0);
+                    imprimir("El numero es menor");
                 }
             } else {
-                imprimir("Acertaste!", 0);
+                imprimir("Acertaste!");
                 break;
             }
         }
 
     }
-    public void imprimir (String cadenaAImprimir, int opcion){
+    public void imprimir (String cadenaAImprimir){
         
-            JOptionPane.showMessageDialog(null, cadenaAImprimir);
-        }
+        JOptionPane.showMessageDialog(null, cadenaAImprimir);
+    }
+    
+    public String introducir (String pregunta){
+        String dato= JOptionPane.showInputDialog(pregunta);
+        return dato;
+    }
 
 }
