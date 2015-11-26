@@ -30,16 +30,20 @@ public class Metodos101 {
             int numIntento = Integer.parseInt(JOptionPane.showInputDialog("Jugador2, intenta adivinar"));
             if (numIntento != numero) {
                 if (numIntento < numero) {
-                    JOptionPane.showMessageDialog(null, "El numero es mayor");
+                    imprimir("El numero es mayor", 0);
                 } else {
-                    JOptionPane.showMessageDialog(null, "El numero es menor");
+                    imprimir("El numero es menor", 0);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Acertaste!");
+                imprimir("Acertaste!", 0);
                 break;
             }
         }
 
     }
+    public void imprimir (String cadenaAImprimir, int opcion){
+        
+            JOptionPane.showMessageDialog(null, cadenaAImprimir);
+        }
 
 }
